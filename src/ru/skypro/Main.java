@@ -32,7 +32,8 @@ public class Main {
             a[i] = i + 1;
             System.out.print(a[i]);
             if (i < a.length - 1) {
-                System.out.print(", "); }
+                System.out.print(", ");
+            }
         }
 
         System.out.println();
@@ -40,7 +41,8 @@ public class Main {
         for (int i = 0; i < b.length; i++) {
             System.out.print(b[i]);
             if (i < b.length - 1) {
-                System.out.print(", "); }
+                System.out.print(", ");
+            }
         }
 
         System.out.println();
@@ -48,7 +50,8 @@ public class Main {
         for (int i = 0; i < g.length; i++) {
             System.out.print(g[i]);
             if (i < g.length - 1) {
-                System.out.print(", "); }
+                System.out.print(", ");
+            }
         }
         System.out.println();
     }
@@ -62,7 +65,8 @@ public class Main {
             a[i] = i + 1;
             System.out.print(a[i]);
             if (i > 0) {
-                System.out.print(", "); }
+                System.out.print(", ");
+            }
         }
 
         System.out.println();
@@ -70,7 +74,8 @@ public class Main {
         for (int i = b.length - 1; i >= 0; i--) {
             System.out.print(b[i]);
             if (i > 0) {
-                System.out.print(", "); }
+                System.out.print(", ");
+            }
         }
 
         System.out.println();
@@ -78,22 +83,27 @@ public class Main {
         for (int i = g.length - 1; i >= 0; i--) {
             System.out.print(g[i]);
             if (i > 0) {
-                System.out.print(", "); }
+                System.out.print(", ");
+            }
         }
         System.out.println();
     }
-    static void task4(){
+
+    static void task4() {
         int[] a = new int[3];
-        a[0] = 7;
-        a[1] = 9;
-        a[2] = 5;
+        a[0] = 6;
+        a[1] = 2;
+        a[2] = 9;
         for (int i = 0; i < a.length; i++) {
-            if (a[i] % 2 == 1){
+            if (a[i] % 2 == 1) {
                 a[i] += 1;
                 System.out.print(a[i]);
                 if (i < a.length - 1) {
-                    System.out.print(", ");
-                }
+                    System.out.print(", ");}
+            } else if (a[i] % 2 == 0) {
+                System.out.print(a[i]);
+                if (i < a.length - 1) {
+                    System.out.print(", ");}
             }
         }
     }
