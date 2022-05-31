@@ -157,6 +157,7 @@ public class Solution {
                 }
             }
         }
+
         static void task9(){
             int[] number = {-6, 2, 5, -8, 8, 10, 4, -7, 12,1};
             for (int i = 0; i < number.length; i++) {
