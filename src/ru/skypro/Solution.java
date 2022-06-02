@@ -13,7 +13,8 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        task9();
+        task3();
+        task6();
     }
 
     static void lecture() {
@@ -65,8 +66,8 @@ public class Solution {
 
     static void task2() {
         int[] payments = generateRandomArray();
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
+        int min = 200_000; // максимальное значение массива 200_000, я правильно понимаю что тут мы прописываем максимально возможное значение?
+        int max = 0; // так - как сумма у нас не может уйти в минус тут у нас 0
         for (int cell : payments) {
             if (cell < min) {
                 min = cell;
@@ -85,10 +86,10 @@ public class Solution {
         for (int cell : payments) {
             sum += cell;
         }
-        mean = (double) sum / 30;
+        mean = (double) sum / payments.length;
         double i = mean * 10;
 
-        if (i % 10 == 0)
+        if (i % 10 == 0) // это для того чтобы проверить остаток от деления числа, если число целое вивести значение int, если нет вывести double
             System.out.println("Средняя сумма трат за месяц составила " + (int) mean + " рублей");
         else
             System.out.println("Средняя сумма трат за месяц составила " + mean + " рублей");
@@ -101,23 +102,26 @@ public class Solution {
         }
     }
 
-    static void task5() {
-        int[][] matrix = new int[3][3];
+    static void task5() { // сделал для любой длинны массива
+        int[][] matrix = new int[6][6];
         int number = 1;
-        matrix[0][0] = number;
-        matrix[1][1] = number;
-        matrix[2][2] = number;
-        for (int[] row : matrix) {
-            for (int column : row) {
-                System.out.print(column + " ");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                if (i == j) {
+                    matrix[i][j] = number;
+                    System.out.print(matrix[i][j]);
+                } else {
+                    System.out.print(matrix[i][j]);
+                }
             }
             System.out.println();
         }
     }
 
+
     static void task6() {
         int[] number = {5, 4, 3, 2, 1};
-        int[] number2 = new int[5];
+        int[] number2 = new int[number.length]; // приравнял к длинне массива
         int j = 0;
         System.out.println(Arrays.toString(number));
         for (int i = number.length - 1; i >= 0; i--) {
