@@ -13,7 +13,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        task3();
+        task2();
         task6();
     }
 
@@ -66,8 +66,8 @@ public class Solution {
 
     static void task2() {
         int[] payments = generateRandomArray();
-        int min = 200_000; // максимальное значение массива 200_000, я правильно понимаю что тут мы прописываем максимально возможное значение?
-        int max = 0; // так - как сумма у нас не может уйти в минус тут у нас 0
+        int min = payments[0]; // приравнял к первому элементу массива
+        int max = payments[0];
         for (int cell : payments) {
             if (cell < min) {
                 min = cell;
